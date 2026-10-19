@@ -1,11 +1,10 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Badge } from "./Badge";
 
-// تعریف متادیتاهای کامپوننت در استوری‌بوک
 const meta: Meta<typeof Badge> = {
   title: "Design System/Atoms/Badge",
   component: Badge,
-  tags: ["autodocs"], // تولید داکیومنت خودکار برای کامپوننت!
+  tags: ["autodocs"],
   argTypes: {
     variant: {
       control: "select",
@@ -21,7 +20,6 @@ const meta: Meta<typeof Badge> = {
 export default meta;
 type Story = StoryObj<typeof Badge>;
 
-// استوری اول: حالت پیش‌فرض
 export const Primary: Story = {
   args: {
     label: "Next.js 15",
@@ -30,7 +28,6 @@ export const Primary: Story = {
   },
 };
 
-// استوری دوم: حالت اخطار یا خطر
 export const Danger: Story = {
   args: {
     label: "React 19 Error",
@@ -38,7 +35,6 @@ export const Danger: Story = {
     size: "sm",
   },
 };
-// استوری دوم: حالت اخطار یا خطر
 export const Secondary: Story = {
   args: {
     label: "React 19 Error",

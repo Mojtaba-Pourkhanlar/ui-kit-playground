@@ -50,14 +50,17 @@ npx storybook@latest init
 
 ## Using the UI Kit in another project
 
-```bash
--  npm i @mojtaba/ui-kit@file:../ui-kit-playground
+add to package.json
+```json
+ "dependencies": {
+    "ui-kit-playground": "git+http://**ui kit path**/ui-kit-playground",
+  },
 ```
 
 - Used Code
 
 ```tsx
-import { Badge } from "@mojtaba/ui-kit";
+import { Badge } from "@ui-kit-playground";
 
 export default function Page() {
   return <Badge label="Mojtaba" variant="primary" />;
@@ -66,4 +69,3 @@ export default function Page() {
 
 ---
 
-## Note: Ensure the destination project has access to Tailwind CSS so that the component classes are applied.
